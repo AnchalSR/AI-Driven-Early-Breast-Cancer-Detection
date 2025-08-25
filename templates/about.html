@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}About - Breast Cancer Detection System{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4">About Our System</h1>
+            <p class="lead">Learn how our advanced technology helps medical professionals make better decisions</p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow border-0">
+                <div class="card-body p-5">
+                    <h3 class="text-primary mb-4">System Overview</h3>
+                    <p class="lead">Our breast cancer analysis system was developed to support healthcare professionals in their diagnostic process. By analyzing 30 key medical parameters, we provide valuable insights that complement clinical judgment.</p>
+                    
+                    <h4 class="mt-4 mb-3">Our Purpose</h4>
+                    <p>We aim to support medical professionals by providing additional analytical insights that can help identify potential risks early, leading to better patient outcomes through timely intervention.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="text-primary mb-3"><i class="fas fa-brain me-2"></i>Technology Stack</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Machine Learning:</strong> XGBoost Classifier</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Backend:</strong> Python Flask</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Data Processing:</strong> Pandas, NumPy</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Styling:</strong> Bootstrap 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="text-primary mb-3"><i class="fas fa-database me-2"></i>Dataset Information</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-info-circle text-info me-2"></i><strong>Source:</strong> Wisconsin Breast Cancer Database</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-info me-2"></i><strong>Features:</strong> 30 numerical parameters</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-info me-2"></i><strong>Samples:</strong> 569 breast tissue samples</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-info me-2"></i><strong>Classes:</strong> Benign (357), Malignant (212)</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-info me-2"></i><strong>Accuracy:</strong> High performance model</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-10 mx-auto">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-cogs me-2"></i>Technical Methodology</h4>
+                </div>
+                <div class="card-body p-4">
+                    <h5 class="text-primary mb-3">Feature Categories</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="text-success">Mean Values (10 features)</h6>
+                            <p>Core characteristics including radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-warning">Standard Error Values (10 features)</h6>
+                            <p>Statistical error measurements for each mean value, providing insight into the reliability of measurements.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-danger">Worst Values (10 features)</h6>
+                            <p>Extreme values observed in each feature, often indicating the most concerning characteristics of the tissue sample.</p>
+                        </div>
+                    </div>
+                    
+                    <h5 class="text-primary mt-4 mb-3">Machine Learning Approach</h5>
+                    <p>The system employs an XGBoost (Extreme Gradient Boosting) classifier, which is particularly effective for medical diagnosis due to its ability to handle complex feature interactions and provide interpretable results.</p>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        <strong>Key Advantage:</strong> XGBoost provides both high accuracy and feature importance rankings, helping medical professionals understand which parameters are most critical for diagnosis.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="text-primary mb-3"><i class="fas fa-chart-line me-2"></i>Performance Metrics</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-star text-warning me-2"></i><strong>Accuracy:</strong> High classification accuracy</li>
+                        <li class="mb-2"><i class="fas fa-star text-warning me-2"></i><strong>Precision:</strong> Low false positive rate</li>
+                        <li class="mb-2"><i class="fas fa-star text-warning me-2"></i><strong>Recall:</strong> High true positive detection</li>
+                        <li class="mb-2"><i class="fas fa-star text-warning me-2"></i><strong>F1-Score:</strong> Balanced precision and recall</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="text-primary mb-3"><i class="fas fa-shield-alt me-2"></i>Safety & Validation</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Medical Disclaimer:</strong> AI assistance only</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Data Privacy:</strong> No patient data storage</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Validation:</strong> Cross-validated model</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Transparency:</strong> Open methodology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card border-0 shadow">
+                <div class="card-body p-4 text-center">
+                    <h4 class="text-primary mb-3">Future Enhancements</h4>
+                    <p class="lead">We're continuously working to improve our system with additional features and capabilities.</p>
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-4">
+                            <i class="fas fa-mobile-alt fa-2x text-primary mb-2"></i>
+                            <h6>Mobile App</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-cloud fa-2x text-primary mb-2"></i>
+                            <h6>Cloud Integration</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                            <h6>Multi-user Support</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

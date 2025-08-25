@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Breast Cancer Detection System{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Early Detection Saves Lives</h1>
+        <p class="lead mb-4">Our advanced breast cancer detection system helps medical professionals identify potential risks early, providing crucial insights for better patient outcomes.</p>
+        <a href="/detect" class="btn btn-light btn-lg me-3">
+            <i class="fas fa-search me-2"></i>Start Detection
+        </a>
+        <a href="/about" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-info-circle me-2"></i>Learn More
+        </a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row text-center mb-5">
+        <div class="col-12">
+            <h2 class="mb-4">Why Healthcare Professionals Trust Our System</h2>
+            <p class="lead">Proven technology that helps doctors make informed decisions with confidence</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card feature-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Smart Analysis</h5>
+                    <p class="card-text">Our system uses sophisticated algorithms that have been trained on thousands of real medical cases to provide reliable assessments.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card feature-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Quick Results</h5>
+                    <p class="card-text">Receive comprehensive analysis results in seconds, helping you make informed decisions faster.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card feature-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Privacy First</h5>
+                    <p class="card-text">We prioritize your privacy. All data is processed securely and never stored permanently.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Simple Three-Step Process</h3>
+                <p class="lead">Our system analyzes 30 different features from breast tissue samples to provide accurate predictions. All values should be entered with up to 2 decimal places for optimal accuracy.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Enter medical data parameters (up to 2 decimal places)</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Our system processes the information</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Get detailed prediction results with confidence scores</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Review probability breakdowns for informed decisions</li>
+                </ul>
+                <a href="/detect" class="btn btn-primary">Try Detection Now</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <i class="fas fa-chart-line fa-6x text-primary"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-12">
+            <h3 class="mb-4">Ready to Begin Analysis?</h3>
+            <p class="lead mb-4">Join medical professionals worldwide who trust our system for better patient care decisions.</p>
+            <a href="/detect" class="btn btn-primary btn-lg">
+                <i class="fas fa-play me-2"></i>Start Detection
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Breast Cancer Detection System{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4">Medical Insights & Education</h1>
+            <p class="lead">Stay informed about breast cancer awareness, prevention strategies, and how technology supports healthcare</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Featured Article -->
+        <div class="col-12">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body p-5">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <span class="badge bg-primary mb-2">Featured</span>
+                            <h2 class="text-primary mb-3">Understanding Breast Cancer: What You Need to Know</h2>
+                            <p class="lead">Breast cancer affects millions of women worldwide each year. Understanding the basics can help you make informed decisions about your health and support loved ones through their journey.</p>
+                            <p>Breast cancer occurs when cells in the breast tissue begin to grow uncontrollably. These cells can form a tumor that may be felt as a lump or seen on an X-ray. While breast cancer primarily affects women, men can also develop this disease.</p>
+                            <div class="mt-4">
+                                <h5>Key Risk Factors:</h5>
+                                <ul>
+                                    <li>Age (risk increases with age)</li>
+                                    <li>Family history of breast cancer</li>
+                                    <li>Genetic mutations (BRCA1, BRCA2)</li>
+                                    <li>Personal history of breast conditions</li>
+                                    <li>Lifestyle factors (alcohol, obesity, lack of exercise)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-female fa-6x text-primary mb-3"></i>
+                            <div class="alert alert-info">
+                                <strong>Did you know?</strong><br>
+                                Early detection can increase 5-year survival rates to over 90%.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Articles -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-success mb-2">Prevention</span>
+                    <h4 class="text-primary mb-3">Prevention Strategies for Breast Cancer</h4>
+                    <p>While not all breast cancers can be prevented, there are several strategies that can help reduce your risk:</p>
+                    <ul>
+                        <li>Maintain a healthy weight</li>
+                        <li>Exercise regularly (150 minutes/week)</li>
+                        <li>Limit alcohol consumption</li>
+                        <li>Breastfeed if possible</li>
+                        <li>Regular screening and self-exams</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-warning mb-2">Technology</span>
+                    <h4 class="text-primary mb-3">AI in Healthcare: Revolutionizing Diagnosis</h4>
+                    <p>Artificial Intelligence is transforming healthcare delivery, particularly in medical imaging and diagnosis:</p>
+                    <ul>
+                        <li>Improved accuracy in image analysis</li>
+                        <li>Faster diagnosis and treatment planning</li>
+                        <li>Reduced radiologist workload</li>
+                        <li>Enhanced early detection capabilities</li>
+                        <li>Personalized treatment recommendations</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-info mb-2">Education</span>
+                    <h4 class="text-primary mb-3">Understanding Mammograms and Screenings</h4>
+                    <p>Regular screening is crucial for early detection. Here's what you need to know:</p>
+                    <ul>
+                        <li>Mammograms detect tumors before they're palpable</li>
+                        <li>Recommended starting age: 40-50 years</li>
+                        <li>Annual or biennial screening based on risk</li>
+                        <li>3D mammography provides better visualization</li>
+                        <li>False positives are common but manageable</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-danger mb-2">Research</span>
+                    <h4 class="text-primary mb-3">Latest Advances in Breast Cancer Treatment</h4>
+                    <p>Medical research continues to advance treatment options:</p>
+                    <ul>
+                        <li>Targeted therapy for specific cancer types</li>
+                        <li>Immunotherapy approaches</li>
+                        <li>Minimally invasive surgical techniques</li>
+                        <li>Personalized medicine based on genetics</li>
+                        <li>Improved chemotherapy protocols</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-secondary mb-2">Support</span>
+                    <h4 class="text-primary mb-3">Supporting Loved Ones with Breast Cancer</h4>
+                    <p>Support from family and friends is crucial during treatment:</p>
+                    <ul>
+                        <li>Listen without judgment</li>
+                        <li>Offer practical help with daily tasks</li>
+                        <li>Accompany to medical appointments</li>
+                        <li>Research treatment options together</li>
+                        <li>Maintain normalcy in relationships</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-2">Innovation</span>
+                    <h4 class="text-primary mb-3">Machine Learning in Medical Imaging</h4>
+                    <p>Our AI system uses advanced algorithms to analyze medical data:</p>
+                    <ul>
+                        <li>XGBoost algorithm for classification</li>
+                        <li>Analysis of 30 different parameters</li>
+                        <li>High accuracy in benign/malignant detection</li>
+                        <li>Real-time prediction capabilities</li>
+                        <li>Continuous learning and improvement</li>
+                    </ul>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>Updated: August 2024
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+            <div class="card border-0 shadow">
+                <div class="card-body p-5 text-center">
+                    <h4 class="text-primary mb-3">Stay Updated</h4>
+                    <p class="lead">Subscribe to our newsletter for the latest updates on breast cancer research, AI advancements, and healthcare technology.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Enter your email address">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">We respect your privacy and will never share your email address.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-book me-2"></i>Additional Resources</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <h6 class="text-primary">Medical Organizations</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">American Cancer Society</a></li>
+                                <li><a href="#" class="text-decoration-none">National Cancer Institute</a></li>
+                                <li><a href="#" class="text-decoration-none">Breast Cancer Research Foundation</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-primary">Support Groups</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Cancer Support Community</a></li>
+                                <li><a href="#" class="text-decoration-none">Living Beyond Breast Cancer</a></li>
+                                <li><a href="#" class="text-decoration-none">Young Survival Coalition</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-primary">Research & Education</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Breast Cancer Research</a></li>
+                                <li><a href="#" class="text-decoration-none">Clinical Trials Database</a></li>
+                                <li><a href="#" class="text-decoration-none">Medical Literature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

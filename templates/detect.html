@@ -1,0 +1,364 @@
+{% extends "base.html" %}
+
+{% block title %}Cancer Detection - Breast Cancer Detection System{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+                         <h1 class="display-4">Breast Cancer Analysis</h1>
+             <p class="lead">Enter the medical parameters below to receive a comprehensive analysis. All values should be entered with up to 2 decimal places for optimal accuracy.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                                         <h5 class="mb-0"><i class="fas fa-microscope me-2"></i>Patient Data Entry</h5>
+                </div>
+                                 <div class="card-body">
+                     <div class="alert alert-info mb-4">
+                         <i class="fas fa-info-circle me-2"></i>
+                         <strong>Important:</strong> Please enter all values with up to 2 decimal places (e.g., 17.99, 0.05, 156.78) for optimal accuracy. The system accepts values between 0 and 50 for most parameters.
+                     </div>
+                     <form id="detectionForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-primary mb-3">Mean Values</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Radius</label>
+                                                                         <input type="number" step="0.01" min="0" max="50" class="form-control" name="mean radius" placeholder="e.g., 17.99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Texture</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean texture" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Perimeter</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean perimeter" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Area</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean area" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Smoothness</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean smoothness" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Compactness</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean compactness" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Concavity</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean concavity" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Concave Points</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean concave points" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Symmetry</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean symmetry" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mean Fractal Dimension</label>
+                                    <input type="number" step="0.01" class="form-control" name="mean fractal dimension" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary mb-3">Standard Error Values</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Radius Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="radius error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Texture Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="texture error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Perimeter Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="perimeter error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Area Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="area error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Smoothness Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="smoothness error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Compactness Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="compactness error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Concavity Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="concavity error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Concave Points Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="concave points error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Symmetry Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="symmetry error" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Fractal Dimension Error</label>
+                                    <input type="number" step="0.01" class="form-control" name="fractal dimension error" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h6 class="text-primary mb-3">Worst Values</h6>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Radius</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst radius" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Texture</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst texture" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Perimeter</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst perimeter" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Area</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst area" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Smoothness</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst smoothness" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Compactness</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst compactness" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Concavity</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst concavity" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Concave Points</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst concave points" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Symmetry</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst symmetry" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Worst Fractal Dimension</label>
+                                    <input type="number" step="0.01" class="form-control" name="worst fractal dimension" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-search me-2"></i>Analyze & Predict
+                            </button>
+                            <button type="button" class="btn btn-outline-warning btn-lg ms-2" onclick="generateRandomValues()">
+                                <i class="fas fa-random me-2"></i>Generate Random Values
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-lg ms-2" onclick="checkForm()">
+                                <i class="fas fa-check me-2"></i>Check Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="resultsSection" class="row mt-5" style="display: none;">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow border-0">
+                <div class="card-header bg-success text-white">
+                                         <h5 class="mb-0"><i class="fas fa-chart-pie me-2"></i>Analysis Report</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div id="predictionResult" class="mb-4"></div>
+                    <div id="confidenceChart" class="mb-4"></div>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                                                 <strong>Medical Disclaimer:</strong> This analysis is intended to assist healthcare professionals and should not replace clinical judgment or professional medical diagnosis. Always consult with qualified medical professionals for patient care decisions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('detectionForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = {};
+    
+    // Collect all form data with decimal validation
+    for (let [key, value] of formData.entries()) {
+        // Ensure value has max 2 decimal places
+        const numValue = parseFloat(value) || 0;
+        data[key] = Math.round(numValue * 100) / 100; // Round to 2 decimal places
+    }
+    
+    console.log('Sending data:', data);
+    
+    try {
+        const response = await fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.error) {
+            alert('Error: ' + result.error);
+            return;
+        }
+        
+        displayResults(result);
+        
+    } catch (error) {
+        alert('Error: ' + error.message);
+    }
+});
+
+function displayResults(result) {
+    const resultsSection = document.getElementById('resultsSection');
+    const predictionResult = document.getElementById('predictionResult');
+    const confidenceChart = document.getElementById('confidenceChart');
+    
+    // Display prediction
+    const predictionClass = result.prediction === 'Malignant' ? 'danger' : 'success';
+    predictionResult.innerHTML = `
+        <h3 class="text-${predictionClass}">Prediction: ${result.prediction}</h3>
+        <p class="lead">Confidence: ${(result.confidence * 100).toFixed(2)}%</p>
+    `;
+    
+    // Display confidence chart
+    confidenceChart.innerHTML = `
+        <div class="row">
+            <div class="col-md-6">
+                <div class="progress mb-2" style="height: 30px;">
+                    <div class="progress-bar bg-success" style="width: ${(result.benign_prob * 100).toFixed(1)}%">
+                        Benign: ${(result.benign_prob * 100).toFixed(1)}%
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="progress mb-2" style="height: 30px;">
+                    <div class="progress-bar bg-danger" style="width: ${(result.malignant_prob * 100).toFixed(1)}%">
+                        Malignant: ${(result.malignant_prob * 100).toFixed(1)}%
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    resultsSection.style.display = 'block';
+    resultsSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function checkForm() {
+    const form = document.getElementById('detectionForm');
+    const inputs = form.querySelectorAll('input[type="number"]');
+    
+    let filledCount = 0;
+    let emptyFields = [];
+    
+    inputs.forEach(input => {
+        if (input.value && input.value.trim() !== '') {
+            filledCount++;
+        } else {
+            emptyFields.push(input.name);
+        }
+    });
+    
+            alert(`Form Status:\nFilled: ${filledCount}/30\nEmpty: ${emptyFields.length}\n\nEmpty fields: ${emptyFields.slice(0, 5).join(', ')}${emptyFields.length > 5 ? '...' : ''}`);
+}
+
+function generateRandomValues() {
+    // Define realistic ranges for each feature based on the dataset
+    const featureRanges = {
+        'mean radius': [6.98, 28.11],
+        'mean texture': [9.71, 39.28],
+        'mean perimeter': [43.79, 188.5],
+        'mean area': [143.5, 2501.0],
+        'mean smoothness': [0.05263, 0.1634],
+        'mean compactness': [0.01938, 0.3454],
+        'mean concavity': [0.0, 0.4268],
+        'mean concave points': [0.0, 0.2012],
+        'mean symmetry': [0.106, 0.304],
+        'mean fractal dimension': [0.04996, 0.09744],
+        'radius error': [0.1115, 2.873],
+        'texture error': [0.3602, 4.885],
+        'perimeter error': [0.757, 21.98],
+        'area error': [6.802, 542.2],
+        'smoothness error': [0.001713, 0.03113],
+        'compactness error': [0.002252, 0.1354],
+        'concavity error': [0.0, 0.396],
+        'concave points error': [0.0, 0.05279],
+        'symmetry error': [0.007882, 0.07895],
+        'fractal dimension error': [0.0008948, 0.02984],
+        'worst radius': [7.93, 36.04],
+        'worst texture': [12.02, 49.54],
+        'worst perimeter': [50.41, 251.2],
+        'worst area': [185.2, 4254.0],
+        'worst smoothness': [0.07117, 0.2226],
+        'worst compactness': [0.02729, 1.058],
+        'worst concavity': [0.0, 1.252],
+        'worst concave points': [0.0, 0.291],
+        'worst symmetry': [0.1565, 0.6638],
+        'worst fractal dimension': [0.05504, 0.2075]
+    };
+    
+    const form = document.getElementById('detectionForm');
+    
+    // Generate random values for each feature
+    for (let feature in featureRanges) {
+        const input = form.querySelector(`[name="${feature}"]`);
+        if (input) {
+            const [min, max] = featureRanges[feature];
+            const randomValue = Math.random() * (max - min) + min;
+            input.value = randomValue.toFixed(2); // Only 2 decimal places
+        }
+    }
+    
+    alert('Random values generated successfully! All values are within realistic ranges from the dataset.');
+}
+
+// Add real-time input validation for decimal places
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('input[type="number"]');
+    
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const value = this.value;
+            if (value && value.includes('.')) {
+                const parts = value.split('.');
+                if (parts[1] && parts[1].length > 2) {
+                    this.value = parseFloat(value).toFixed(2);
+                }
+            }
+        });
+    });
+});
+</script>
+{% endblock %} 
