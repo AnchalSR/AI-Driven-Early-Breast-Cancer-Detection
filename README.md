@@ -17,8 +17,6 @@ A professional web application that empowers healthcare professionals with AI-dr
 
 - **🐍 Backend**: Python Flask
 - **🤖 Machine Learning**: XGBoost Classifier
-- **🌐 Frontend**: HTML5, CSS3, JavaScript
-- **🎨 Styling**: Bootstrap 5
 - **📊 Data Processing**: Pandas, NumPy
 - **💾 Model Storage**: Pickle format
 
@@ -135,12 +133,8 @@ This project is developed for educational and research purposes in the field of 
 For technical support or questions about the system:
 - 📖 Check the About page for detailed information
 - 📚 Review the blog section for educational content
-- ✅ Ensure all requirements are properly installed
+- ✅ mail - anchalverma772@gmail.com
 
----
-
-**Developed by Anchal with ❤️ for better healthcare**
-
----
 
 *Developed by Anchal - 2025 | Empowering healthcare professionals with AI-driven insights* 
+
